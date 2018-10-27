@@ -11,7 +11,7 @@ export default class StaticBanner extends React.Component {
   }
 
   static show({
-    body = '',
+    label = '',
     buttonLabel = '',
     buttonOnClick = () => {},
     showDismissButton = true,
@@ -23,7 +23,7 @@ export default class StaticBanner extends React.Component {
         open: true,
         options: {
           ...Banner.Instance.state.options,
-          body,
+          label,
           buttonLabel,
           buttonOnClick,
           showDismissButton,
@@ -33,7 +33,7 @@ export default class StaticBanner extends React.Component {
       });
     } else {
       console.warn('No banner found');
-      console.warn(body);
+      console.warn(label);
     }
   }
 
@@ -43,7 +43,7 @@ export default class StaticBanner extends React.Component {
     this.state = {
       open: false,
       options: {
-        body: '',
+        label: '',
         buttonLabel: '',
         buttonOnClick: () => {},
         showDismissButton: true,

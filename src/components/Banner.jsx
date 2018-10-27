@@ -4,7 +4,6 @@ import {
   Paper, Card, Grid, Typography, Button, Divider,
   CardActions, CardContent, Avatar, Hidden, Collapse, withWidth,
 } from '@material-ui/core';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -46,7 +45,7 @@ const styles = theme => ({
 export default class Banner extends React.Component {
   static propTypes = {
     open: PropTypes.bool.isRequired,
-    body: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
     buttonLabel: PropTypes.string,
     buttonOnClick: PropTypes.func,
     showDismissButton: PropTypes.bool,
@@ -105,7 +104,7 @@ export default class Banner extends React.Component {
     const {
       open,
       classes,
-      body,
+      label,
       icon,
       appBar,
     } = this.props;
@@ -133,7 +132,7 @@ export default class Banner extends React.Component {
 
                 <Grid item className={classes.label}>
                   <Typography variant="body2">
-                    {body}
+                    {label}
                   </Typography>
                 </Grid>
 

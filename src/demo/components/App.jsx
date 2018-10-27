@@ -16,12 +16,12 @@ const styles = theme => ({
 export default class App extends React.Component {
   handleOpenSmall = () => StaticBanner.show({
     icon: <div />,
-    body: 'This is an example of a static banner with one line of text.',
+    label: 'This is an example of a static banner with one line of text.',
   });
 
   handleOpenLarge = () => StaticBanner.show({
     icon: <div />,
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan eget erat non sagittis. Proin aliquam consequat orci et ultrices. Praesent scelerisque magna non libero mollis volutpat. Vestibulum posuere, eros ut dignissim imperdiet, urna nunc gravida sem, id pulvinar dui metus et tellus. In hac habitasse platea dictumst.',
+    label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan eget erat non sagittis. Proin aliquam consequat orci et ultrices. Praesent scelerisque magna non libero mollis volutpat. Vestibulum posuere, eros ut dignissim imperdiet, urna nunc gravida sem, id pulvinar dui metus et tellus. In hac habitasse platea dictumst.',
   });
 
   render() {
@@ -58,7 +58,7 @@ export default class App extends React.Component {
             <Card>
               <Banner
                 icon={<div />}
-                body="This is an example of a banner that can be embedded anywhere in your page"
+                label="This is an example of a banner that can be embedded anywhere in your page"
               />
             </Card>
           </Grid>
