@@ -33,6 +33,8 @@ StaticBanner.show({
 });
 ```
 
+Please refer to `src/demo` for examples.
+
 ## Options
 
 These options are compatible with both `<Banner>` and `StaticBanner.show()`
