@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Paper, Card, Grid, Typography, Button, Divider,
-  CardActions, CardContent, Avatar, Hidden, Collapse, withWidth,
+  CardActions, CardContent, Avatar, Hidden, Collapse,
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -48,10 +48,13 @@ export default class Banner extends React.Component {
     label: PropTypes.string.isRequired,
     buttonLabel: PropTypes.string,
     buttonOnClick: PropTypes.func,
+    buttonComponent: PropTypes.element,
+    buttonProps: PropTypes.object,
     showDismissButton: PropTypes.bool,
     dismissButtonLabel: PropTypes.string,
     onClose: PropTypes.func,
     icon: PropTypes.element,
+    iconProps: PropTypes.object,
     appBar: PropTypes.bool,
   }
 
@@ -61,6 +64,9 @@ export default class Banner extends React.Component {
     showDismissButton: true,
     dismissButtonLabel: 'Dismiss',
     appBar: false,
+    buttonComponent: 'button',
+    buttonProps: {},
+    iconProps: {},
   }
 
   renderButtons() {
@@ -71,6 +77,8 @@ export default class Banner extends React.Component {
       dismissButtonLabel,
       buttonOnClick,
       buttonLabel,
+      buttonComponent,
+      buttonProps,
     } = this.props;
 
     return (
@@ -91,6 +99,8 @@ export default class Banner extends React.Component {
             <Button
               variant="text"
               onClick={buttonOnClick}
+              component={buttonComponent}
+              {...buttonProps}
             >
               {buttonLabel}
             </Button>
@@ -106,6 +116,7 @@ export default class Banner extends React.Component {
       classes,
       label,
       icon,
+      iconProps,
       appBar,
     } = this.props;
 
@@ -124,7 +135,7 @@ export default class Banner extends React.Component {
               >
                 {icon && (
                   <Grid item>
-                    <Avatar className={classes.avatar}>
+                    <Avatar className={classes.avatar} {...iconProps}>
                       {icon}
                     </Avatar>
                   </Grid>

@@ -10,6 +10,9 @@ const styles = theme => ({
     flexGrow: 1,
   },
   appBarSpacer: theme.mixins.toolbar,
+  avatar: {
+    backgroundColor: theme.palette.secondary.main,
+  },
 });
 
 @withStyles(styles)
@@ -58,7 +61,14 @@ export default class App extends React.Component {
             <Card>
               <Banner
                 icon={<div />}
+                iconProps={{
+                  className: classes.avatar,
+                }}
                 label="This is an example of a banner that can be embedded anywhere in your page"
+                buttonLabel="Other"
+                buttonProps={{
+                  variant: 'contained',
+                }}
               />
             </Card>
           </Grid>
