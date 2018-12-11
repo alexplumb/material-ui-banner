@@ -14,9 +14,12 @@ export default class StaticBanner extends React.Component {
     label = '',
     buttonLabel = '',
     buttonOnClick = () => {},
+    buttonComponent = 'button',
+    buttonProps = {},
     showDismissButton = true,
     dismissButtonLabel = 'Dismiss',
     icon = null,
+    iconProps = {},
   }) {
     if (Banner.Instance) {
       Banner.Instance.setState({
@@ -29,6 +32,9 @@ export default class StaticBanner extends React.Component {
           showDismissButton,
           dismissButtonLabel,
           icon,
+          iconProps,
+          buttonProps,
+          buttonComponent,
         },
       });
     } else {
@@ -46,9 +52,12 @@ export default class StaticBanner extends React.Component {
         label: '',
         buttonLabel: '',
         buttonOnClick: () => {},
+        buttonComponent: 'button',
+        buttonProps: {},
         showDismissButton: true,
         dismissButtonLabel: 'Dismiss',
         icon: null,
+        iconProps: {},
       },
     };
 
