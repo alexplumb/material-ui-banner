@@ -18,7 +18,6 @@ module.exports = merge(common, {
   },
   externals: [
     {
-      lodash: 'lodash',
       react: {
         root: 'React',
         commonjs2: 'react',

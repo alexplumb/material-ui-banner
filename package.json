@@ -17,6 +17,7 @@
     "react",
     "banner"
   ],
+  "sideEffects": false,
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexplumb/material-ui-banner/issues"

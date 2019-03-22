@@ -1,8 +1,11 @@
 import React from 'react';
-import {
-  AppBar, Toolbar, Typography, Button, Grid, Card,
-} from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import withStyles from '@material-ui/core/styles/withStyles';
 import { Banner, StaticBanner } from '../../index';
 
 const styles = theme => ({

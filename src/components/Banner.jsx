@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Paper, Card, Grid, Typography, Button, Divider,
-  CardActions, CardContent, Avatar, Hidden, Collapse,
-} from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Card from '@material-ui/core/Card';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Avatar from '@material-ui/core/Avatar';
+import Hidden from '@material-ui/core/Hidden';
+import Collapse from '@material-ui/core/Collapse';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 const styles = theme => ({
   root: {
