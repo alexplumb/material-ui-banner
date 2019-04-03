@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Paper, Card, Grid, Typography, Button, Divider,
+  Paper, Card, Grid, Typography, Button, Divider, ButtonBase,
   CardActions, CardContent, Avatar, Hidden, Collapse,
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
@@ -48,7 +48,7 @@ export default class Banner extends React.Component {
     label: PropTypes.string.isRequired,
     buttonLabel: PropTypes.string,
     buttonOnClick: PropTypes.func,
-    buttonComponent: PropTypes.element,
+    buttonComponent: PropTypes.any,
     buttonProps: PropTypes.object,
     showDismissButton: PropTypes.bool,
     dismissButtonLabel: PropTypes.string,
@@ -64,7 +64,7 @@ export default class Banner extends React.Component {
     showDismissButton: true,
     dismissButtonLabel: 'Dismiss',
     appBar: false,
-    buttonComponent: 'button',
+    buttonComponent: ButtonBase,
     buttonProps: {},
     iconProps: {},
   }
@@ -118,7 +118,11 @@ export default class Banner extends React.Component {
       icon,
       iconProps,
       appBar,
+      showDismissButton,
+      buttonLabel,
     } = this.props;
+
+    const hasButton = Boolean(showDismissButton || buttonLabel);
 
     return (
       <Collapse in={open}>
@@ -148,12 +152,12 @@ export default class Banner extends React.Component {
                 </Grid>
 
                 <Hidden smDown>
-                  {appBar && this.renderButtons()}
+                  {appBar && hasButton && this.renderButtons()}
                 </Hidden>
               </Grid>
             </CardContent>
 
-            {!appBar && (
+            {!appBar && hasButton && (
               <Hidden smDown>
                 <CardActions>
                   {this.renderButtons()}
@@ -161,11 +165,13 @@ export default class Banner extends React.Component {
               </Hidden>
             )}
 
-            <Hidden mdUp>
-              <CardActions>
-                {this.renderButtons()}
-              </CardActions>
-            </Hidden>
+            {hasButton && (
+              <Hidden mdUp>
+                <CardActions>
+                  {this.renderButtons()}
+                </CardActions>
+              </Hidden>
+            )}
 
             <Hidden smDown>
               <div />

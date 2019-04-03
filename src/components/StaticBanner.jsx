@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonBase from '@material-ui/core/ButtonBase';
 import Banner from './Banner';
 
 export default class StaticBanner extends React.Component {
@@ -14,7 +15,7 @@ export default class StaticBanner extends React.Component {
     label = '',
     buttonLabel = '',
     buttonOnClick = () => {},
-    buttonComponent = 'button',
+    buttonComponent = ButtonBase,
     buttonProps = {},
     showDismissButton = true,
     dismissButtonLabel = 'Dismiss',
@@ -52,7 +53,7 @@ export default class StaticBanner extends React.Component {
         label: '',
         buttonLabel: '',
         buttonOnClick: () => {},
-        buttonComponent: 'button',
+        buttonComponent: ButtonBase,
         buttonProps: {},
         showDismissButton: true,
         dismissButtonLabel: 'Dismiss',
