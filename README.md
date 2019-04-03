@@ -112,6 +112,18 @@ These options are compatible with both `<Banner>` and `StaticBanner.show()`
     <td> Additional properties that can be passed to the button. See https://material-ui.com/api/button/</td>
     <td> {} </td>
   </tr>
+    <tr>
+    <td> paperProps </td>
+    <td> objct </td>
+    <td> Additional properties that can be passed to the Paper component. See https://material-ui.com/api/paper/</td>
+    <td> {} </td>
+  </tr>
+    <tr>
+    <td> cardProps </td>
+    <td> objct </td>
+    <td> Additional properties that can be passed to the Card component. See https://material-ui.com/api/card/</td>
+    <td> {} </td>
+  </tr>
   <tr>
     <td> appBar </td>
     <td> boolean </td>
