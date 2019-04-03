@@ -18,6 +18,7 @@ const styles = theme => ({
       width: 1100,
       marginLeft: 'auto',
       marginRight: 'auto',
+      maxWidth: '100%',
     },
   },
   cardContent: {
@@ -56,6 +57,9 @@ export default class Banner extends React.Component {
     icon: PropTypes.element,
     iconProps: PropTypes.object,
     appBar: PropTypes.bool,
+
+    paperProps: PropTypes.object,
+    cardProps: PropTypes.object,
   }
 
   static defaultProps = {
@@ -67,6 +71,9 @@ export default class Banner extends React.Component {
     buttonComponent: ButtonBase,
     buttonProps: {},
     iconProps: {},
+
+    paperProps: {},
+    cardProps: {},
   }
 
   renderButtons() {
@@ -120,14 +127,16 @@ export default class Banner extends React.Component {
       appBar,
       showDismissButton,
       buttonLabel,
+      paperProps,
+      cardProps,
     } = this.props;
 
     const hasButton = Boolean(showDismissButton || buttonLabel);
 
     return (
       <Collapse in={open}>
-        <Paper elevation={0} className={classes.root}>
-          <Card elevation={0} className={appBar ? classes.appBar : ''}>
+        <Paper elevation={0} className={classes.root} {...paperProps}>
+          <Card elevation={0} className={appBar ? classes.appBar : ''} {...cardProps}>
             <CardContent className={classes.cardContent}>
               <Grid
                 container
