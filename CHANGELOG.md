@@ -4,7 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.4] - 2018-03-22
+## [1.2.0] - 2019-04-03
+### Added
+- Added `paperProps` and `cardProps` to help people extend components a little easier
+### Fixed
+- Fixed some property definitions
+- [Fixed an issue where the banner was getting cut off on certain browser sizes](https://github.com/alexplumb/material-ui-banner/issues/1)
+### Changed
+- [The `CardActions` component will no longer render if no buttons are present](https://github.com/alexplumb/material-ui-banner/issues/3)
+
+## [1.1.4] - 2019-03-22
 ### Changed
 - Slightly optimized build size
 
