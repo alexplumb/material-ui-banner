@@ -4,7 +4,7 @@ import {
   Paper, Card, Grid, Typography, Button, Divider, ButtonBase,
   CardActions, CardContent, Avatar, Hidden, Collapse,
 } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@material-ui/styles/withStyles';
 
 const styles = theme => ({
   root: {
@@ -22,10 +22,10 @@ const styles = theme => ({
     },
   },
   cardContent: {
-    paddingLeft: theme.spacing.unit * 2,
-    paddingRight: theme.spacing.unit,
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(1),
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
   },
   avatar: {
     backgroundColor: theme.palette.primary.main,
@@ -75,6 +75,8 @@ export default class Banner extends React.Component {
     paperProps: {},
     cardProps: {},
   }
+
+  static displayName = 'MaterialUiBanner'
 
   renderButtons() {
     const {
@@ -141,7 +143,7 @@ export default class Banner extends React.Component {
               <Grid
                 container
                 wrap="nowrap"
-                spacing={16}
+                spacing={2}
                 direction="row"
                 justify="flex-start"
                 alignItems="flex-start"
