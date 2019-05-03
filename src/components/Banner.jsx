@@ -76,7 +76,7 @@ export default class Banner extends React.Component {
     cardProps: {},
   }
 
-  static displayName = 'MaterialUiBanner'
+  static displayName = 'MuiBanner'
 
   renderButtons() {
     const {
