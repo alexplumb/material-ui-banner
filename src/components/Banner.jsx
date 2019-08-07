@@ -4,7 +4,7 @@ import {
   Paper, Card, Grid, Typography, Button, Divider, ButtonBase,
   CardActions, CardContent, Avatar, Hidden, Collapse,
 } from '@material-ui/core';
-import withStyles from '@material-ui/styles/withStyles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   root: {
