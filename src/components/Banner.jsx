@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Paper, Card, Grid, Typography, Button, Divider, ButtonBase,
-  CardActions, CardContent, Avatar, Hidden, Collapse,
+  CardActions, CardContent, Avatar, Hidden, Collapse, withStyles,
 } from '@material-ui/core';
-import withStyles from '@material-ui/styles/withStyles';
 
 const styles = theme => ({
   root: {
