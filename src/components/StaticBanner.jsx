@@ -19,6 +19,7 @@ export default class StaticBanner extends React.Component {
     buttonProps = {},
     showDismissButton = true,
     dismissButtonLabel = 'Dismiss',
+    dismissButtonProps = {},
     icon = null,
     iconProps = {},
   }) {
@@ -32,6 +33,7 @@ export default class StaticBanner extends React.Component {
           buttonOnClick,
           showDismissButton,
           dismissButtonLabel,
+          dismissButtonProps,
           icon,
           iconProps,
           buttonProps,
@@ -57,6 +59,7 @@ export default class StaticBanner extends React.Component {
         buttonProps: {},
         showDismissButton: true,
         dismissButtonLabel: 'Dismiss',
+        dismissButtonProps: {},
         icon: null,
         iconProps: {},
       },

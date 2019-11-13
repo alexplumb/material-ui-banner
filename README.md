@@ -83,6 +83,12 @@ These options are compatible with both `<Banner>` and `StaticBanner.show()`
     <td> 'Dismiss' </td>
   </tr>
   <tr>
+    <td> dismissButtonProps </td>
+    <td> object </td>
+    <td> Additional properties that can be passed to the default "Dismiss" button. See https://material-ui.com/api/button/</td>
+    <td> {} </td>
+  </tr>
+  <tr>
     <td> onClose </td>
     <td> function </td>
     <td> Callback invoked when clicking the Dismiss button. StaticBanner passes a close handler automatically </td>
