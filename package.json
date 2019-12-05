@@ -39,7 +39,6 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2"
-
   },
   "peerDependencies": {
     "@material-ui/core": "^4.0.1",
