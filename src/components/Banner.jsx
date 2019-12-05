@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'block',
     width: '100%',
@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
   label: {
     alignSelf: 'center',
   }
-}));
+}), { name: 'MuiBanner' });
 
 const MuiBanner = React.memo(({
   open,
