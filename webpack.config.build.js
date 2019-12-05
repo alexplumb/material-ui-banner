@@ -10,12 +10,6 @@ module.exports = merge(common, {
   entry: {
     'material-ui-banner': path.resolve(ROOT_PATH, 'src/index.js'),
   },
-  output: {
-    path: path.resolve(ROOT_PATH, 'dist'),
-    filename: 'index.js',
-    library: 'MaterialUiBanner',
-    libraryTarget: 'umd',
-  },
   externals: [
     {
       react: {
@@ -33,8 +27,7 @@ module.exports = merge(common, {
     },
     "@material-ui/core",
     /@material-ui\/core\/*./,
-    "@material-ui/styles",
-    /@material-ui\/styles\/*./,
+    'clsx',
   ],
   plugins: [
     new webpack.DefinePlugin({

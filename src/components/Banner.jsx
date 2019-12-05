@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import {
   Paper, Card, Grid, Typography, Button, Divider, ButtonBase,
   CardActions, CardContent, Avatar, Hidden, Collapse, Container,
@@ -14,18 +15,39 @@ const useStyles = makeStyles(theme => ({
     marginRight: 'auto',
   },
   cardContent: {
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(1),
-    paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
+    paddingRight: theme.spacing(1),
+  },
+  cardContentIconAppBar: {
+    paddingLeft: theme.spacing(2),
+    paddingTop: theme.spacing(2),
+
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing(3),
+    },
+  },
+  cardContentIconNoAppBar: {
+    paddingLeft: theme.spacing(2),
+    paddingTop: theme.spacing(3),
+  },
+  cardContentNoIconAppBar: {
+    paddingLeft: theme.spacing(3),
+    paddingtop: theme.spacing(8),
+  },
+  cardContentNoIconNoAppBar: {
+    paddingLeft: theme.spacing(2),
+    paddingTop: theme.spacing(1) + 2,
   },
   avatar: {
     backgroundColor: theme.palette.primary.main,
+    height: theme.spacing(5),
+    width: theme.spacing(5),
   },
   flex: {
     flexGrow: 1,
   },
   buttons: {
+    whiteSpace: 'nowrap',
     alignSelf: 'flex-end',
     paddingLeft: '90px !important',
   },
@@ -96,18 +118,29 @@ const MuiBanner = React.memo(({
     <Collapse in={open}>
       <Paper elevation={0} className={classes.root} {...paperProps}>
         <Card elevation={0} {...containerProps} {...cardProps}>
-          <CardContent className={classes.cardContent}>
+          <CardContent
+            className={clsx(
+              classes.cardContent,
+              icon && appBar && classes.cardContentIconAppBar,
+              icon && !appBar && classes.cardContentIconNoAppBar,
+              !icon && appBar && classes.cardContentNoIconAppBar,
+              !icon && !appBar && classes.cardContentNoIconNoAppBar,
+            )}
+          >
             <Grid
               container
               wrap="nowrap"
-              spacing={2}
+              spacing={appBar ? 3 : 2}
               direction="row"
               justify="flex-start"
               alignItems="flex-start"
             >
               {icon && (
                 <Grid item>
-                  <Avatar className={classes.avatar} {...iconProps}>
+                  <Avatar
+                    className={classes.avatar}
+                    {...iconProps}
+                  >
                     {icon}
                   </Avatar>
                 </Grid>

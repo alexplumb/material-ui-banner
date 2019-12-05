@@ -12,6 +12,9 @@ module.exports = {
   output: {
     path: path.resolve(ROOT_PATH, 'dist'),
     filename: 'index.js',
+    library: 'MaterialUiBanner',
+    libraryTarget: 'umd',
+    futureEmitAssets: true,
   },
   module: {
     rules: [

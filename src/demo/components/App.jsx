@@ -24,6 +24,15 @@ export default React.memo(() => {
   }), []);
 
   const handleOpenLarge = useCallback(() => StaticBanner.show({
+    buttonLabel: 'Tell me more...',
+    buttonProps: {
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      href: 'https://www.google.com',
+      style: {
+        whiteSpace: 'nowrap',
+      },
+    },
     icon: <div />,
     label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan eget erat non sagittis. Proin aliquam consequat orci et ultrices. Praesent scelerisque magna non libero mollis volutpat. Vestibulum posuere, eros ut dignissim imperdiet, urna nunc gravida sem, id pulvinar dui metus et tellus. In hac habitasse platea dictumst.',
   }), []);
