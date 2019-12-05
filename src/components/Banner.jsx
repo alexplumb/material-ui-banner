@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContentNoIconAppBar: {
     paddingLeft: theme.spacing(3),
-    paddingtop: theme.spacing(8),
+    paddingTop: theme.spacing(1),
   },
   cardContentNoIconNoAppBar: {
     paddingLeft: theme.spacing(2),
