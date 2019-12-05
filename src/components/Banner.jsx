@@ -52,6 +52,7 @@ export default class Banner extends React.Component {
     buttonProps: PropTypes.object,
     showDismissButton: PropTypes.bool,
     dismissButtonLabel: PropTypes.string,
+    dismissButtonProps: PropTypes.object,
     onClose: PropTypes.func,
     icon: PropTypes.element,
     iconProps: PropTypes.object,
@@ -66,6 +67,7 @@ export default class Banner extends React.Component {
     buttonOnClick: () => {},
     showDismissButton: true,
     dismissButtonLabel: 'Dismiss',
+    dismissButtonProps: {},
     appBar: false,
     buttonComponent: ButtonBase,
     buttonProps: {},
@@ -83,6 +85,7 @@ export default class Banner extends React.Component {
       onClose,
       showDismissButton,
       dismissButtonLabel,
+      dismissButtonProps,
       buttonOnClick,
       buttonLabel,
       buttonComponent,
@@ -98,6 +101,7 @@ export default class Banner extends React.Component {
             <Button
               variant="text"
               onClick={onClose}
+              {...dismissButtonProps}
             >
               {dismissButtonLabel}
             </Button>
