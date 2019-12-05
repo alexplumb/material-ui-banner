@@ -8,6 +8,11 @@ npm install material-ui-banner --save
 ```
 
 ## Usage
+### Imports:
+```
+import { Banner, StaticBanner } from 'material-ui-banner';
+```
+
 ### To embed a banner anywhere on the page
 ```jsx
 <Banner
@@ -127,7 +132,7 @@ These options are compatible with both `<Banner>` and `StaticBanner.show()`
     <tr>
     <td> cardProps </td>
     <td> objct </td>
-    <td> Additional properties that can be passed to the Card component. See https://material-ui.com/api/card/</td>
+    <td> Additional properties that can be passed to the Card component. See https://material-ui.com/api/card/. If `appBar` is set to `true`, you can also use this parameter to pass in properties to the `Container` component. See `https://material-ui.com/api/container/`</td>
     <td> {} </td>
   </tr>
   <tr>

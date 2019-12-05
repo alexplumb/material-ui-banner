@@ -5,6 +5,8 @@ import Banner from './Banner';
 export default class StaticBanner extends React.Component {
   static Instance;
 
+  static displayName = 'MuiStaticBanner';
+
   static hide() {
     Banner.Instance.setState({
       open: false,

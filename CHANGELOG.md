@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.0] - 2019-12-05
 ### Added
 - [Added support for `dismissButtonProps` property](https://github.com/alexplumb/material-ui-banner/pull/7)
+- [Added more information to the README](https://github.com/alexplumb/material-ui-banner/issues/9)
+### Changed
+- Instead of defining an arbitrary width, use the new [`Container`](https://material-ui.com/components/container/) API. Note that by default the the container has a `maxWidth` of `lg`, which is wider than the previous hard-coded width of 1100px
+- Refactor base `MuiBanner` component as a hook
 
 ## [1.3.1] - 2019-08-27
 ### Removed
