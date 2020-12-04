@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContentNoIconNoAppBar: {
     paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(1) + 2,
+    paddingTop: theme.spacing(1 + 2),
   },
   avatar: {
     backgroundColor: theme.palette.primary.main,
@@ -132,7 +132,7 @@ const MuiBanner = React.memo(({
               wrap="nowrap"
               spacing={appBar ? 3 : 2}
               direction="row"
-              justify="flex-start"
+              justifyContent="flex-start"
               alignItems="flex-start"
             >
               {icon && (

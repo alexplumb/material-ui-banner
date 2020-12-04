@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [next] - 2020-12-04
+### Changed
+- Updated all peerDependencies to support material-ui 5 (alpha 18)
+- Updated properties and styling to match material-ui 5 syntax
+### Fixed
+- Mobile UI for the demo page
+
 ## [1.4.2] - 2019-12-06
 ### Changed
 - All styles are now correctly scoped to `MuiBanner` - i.e. `MuiBanner.label` for the purposes of theme overrides

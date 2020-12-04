@@ -63,8 +63,8 @@ export default React.memo(() => {
 
       <StaticBanner />
 
-      <Grid container justify="center">
-        <Grid item xs={3}>
+      <Grid container justifyContent="center">
+        <Grid item xs={12} md={3}>
           <Card>
             <Banner
               icon={<div />}
