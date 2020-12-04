@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [next] - 2020-12-04
+## [2.0.0-next] - 2020-12-04
 ### Changed
 - Updated all peerDependencies to support material-ui 5 (alpha 18)
 - Updated properties and styling to match material-ui 5 syntax
