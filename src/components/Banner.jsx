@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }), { name: 'MuiBanner' });
 
-const MuiBanner = React.memo(({
+const MuiBanner = React.forwardRef(({
   open,
   label,
   icon,
@@ -72,7 +72,7 @@ const MuiBanner = React.memo(({
   paperProps,
   cardProps,
   onClose,
-}) => {
+}, ref) => {
   const classes = useStyles();
 
   const hasButton = Boolean(showDismissButton || buttonLabel);
@@ -115,7 +115,7 @@ const MuiBanner = React.memo(({
   }
 
   return (
-    <Collapse in={open}>
+    <Collapse in={open} ref={ref}>
       <Paper elevation={0} className={classes.root} {...paperProps}>
         <Card elevation={0} {...containerProps} {...cardProps}>
           <CardContent
