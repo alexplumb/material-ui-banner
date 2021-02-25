@@ -24,6 +24,9 @@ export default class StaticBanner extends React.Component {
     dismissButtonProps = {},
     icon = null,
     iconProps = {},
+    cardProps = {},
+    paperProps = {},
+    appBar = false
   }) {
     if (Banner.Instance) {
       Banner.Instance.setState({
@@ -40,6 +43,9 @@ export default class StaticBanner extends React.Component {
           iconProps,
           buttonProps,
           buttonComponent,
+          cardProps,
+          paperProps,
+          appBar
         },
       });
     } else {
