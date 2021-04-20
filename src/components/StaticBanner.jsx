@@ -24,6 +24,10 @@ export default class StaticBanner extends React.Component {
     dismissButtonProps = {},
     icon = null,
     iconProps = {},
+    cardProps = {},
+    paperProps = {},
+    appBar = false,
+    onClose = () => {},
   }) {
     if (Banner.Instance) {
       Banner.Instance.setState({
@@ -40,6 +44,10 @@ export default class StaticBanner extends React.Component {
           iconProps,
           buttonProps,
           buttonComponent,
+          cardProps,
+          paperProps,
+          appBar,
+          onClose
         },
       });
     } else {
@@ -71,12 +79,13 @@ export default class StaticBanner extends React.Component {
   }
 
   handleClose = () => {
+    this.state.options.onClose();
     this.setState({ open: false });
   }
 
   render() {
     const { open, options } = this.state;
 
-    return <Banner open={open} onClose={this.handleClose} {...options} appBar />;
+    return <Banner open={open} {...options} onClose={this.handleClose} appBar />;
   }
 }
