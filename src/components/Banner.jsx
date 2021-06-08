@@ -7,7 +7,7 @@ import {
   CardContent, Avatar, Collapse, Container,
 } from '@material-ui/core';
 import makeStyles from '@material-ui/styles/makeStyles';
-import { Hide } from './Hide';
+import { Hide, useIsMobile } from './Hide';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
   cardContentIconAppBar: {
     paddingLeft: 16,
     paddingTop: 16,
-
-    [theme.breakpoints.down('md')]: {
-      paddingTop: 24,
-    },
+  },
+  cardContentIconAppBarMobile: {
+    paddingLeft: 16,
+    paddingTop: 24,
   },
   cardContentIconNoAppBar: {
     paddingLeft: 16,
@@ -77,6 +77,8 @@ const MuiBanner = React.forwardRef(({
 }, ref) => {
   const classes = useStyles();
 
+  const isMobile = useIsMobile();
+
   const hasButton = Boolean(showDismissButton || buttonLabel);
   const renderButtons = useMemo(() => (
     <>
@@ -123,7 +125,8 @@ const MuiBanner = React.forwardRef(({
           <CardContent
             className={clsx(
               classes.cardContent,
-              icon && appBar && classes.cardContentIconAppBar,
+              icon && appBar && !isMobile && classes.cardContentIconAppBar,
+              icon && appBar && isMobile && classes.cardContentIconAppBarMobile,
               icon && !appBar && classes.cardContentIconNoAppBar,
               !icon && appBar && classes.cardContentNoIconAppBar,
               !icon && !appBar && classes.cardContentNoIconNoAppBar,
@@ -141,6 +144,9 @@ const MuiBanner = React.forwardRef(({
                 <Grid item>
                   <Avatar
                     className={classes.avatar}
+                    sx={{
+                      bgcolor: 'primary.main',
+                    }}
                     {...iconProps}
                   >
                     {icon}
