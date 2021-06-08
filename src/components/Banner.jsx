@@ -2,10 +2,12 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
-  Paper, Card, Grid, Typography, Button, Divider, ButtonBase,
-  CardActions, CardContent, Avatar, Hidden, Collapse, Container,
+  Paper, Card, Grid, Typography,
+  Button, Divider, ButtonBase, CardActions,
+  CardContent, Avatar, Collapse, Container,
 } from '@material-ui/core';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import makeStyles from '@material-ui/styles/makeStyles';
+import { Hide } from './Hide';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(2),
     paddingTop: theme.spacing(2),
 
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       paddingTop: theme.spacing(3),
     },
   },
@@ -152,31 +154,31 @@ const MuiBanner = React.forwardRef(({
                 </Typography>
               </Grid>
 
-              <Hidden smDown>
+              <Hide mdDown>
                 {appBar && hasButton && renderButtons}
-              </Hidden>
+              </Hide>
             </Grid>
           </CardContent>
 
           {!appBar && hasButton && (
-            <Hidden smDown>
+            <Hide mdDown>
               <CardActions>
                 {renderButtons}
               </CardActions>
-            </Hidden>
+            </Hide>
           )}
 
           {hasButton && (
-            <Hidden mdUp>
+            <Hide mdUp>
               <CardActions>
                 {renderButtons}
               </CardActions>
-            </Hidden>
+            </Hide>
           )}
 
-          <Hidden smDown>
+          <Hide mdDown>
             <div />
-          </Hidden>
+          </Hide>
         </Card>
 
         <Divider />
