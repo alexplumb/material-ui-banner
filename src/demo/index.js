@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import createTheme from '@material-ui/core/styles/createTheme';
+import ThemeProvider from '@material-ui/core/styles/ThemeProvider';
 import App from './components/App';
 
-const theme = createMuiTheme();
+const theme = createTheme();
 
 export default render(
-  <MuiThemeProvider theme={theme}>
+  <ThemeProvider theme={theme}>
     <App />
-  </MuiThemeProvider>,
+  </ThemeProvider>,
   document.getElementById('root'),
 );
