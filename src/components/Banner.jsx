@@ -17,33 +17,33 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto',
   },
   cardContent: {
-    paddingBottom: theme.spacing(1),
-    paddingRight: theme.spacing(1),
+    paddingBottom: 8,
+    paddingRight: 8,
   },
   cardContentIconAppBar: {
-    paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(2),
+    paddingLeft: 16,
+    paddingTop: 16,
 
     [theme.breakpoints.down('md')]: {
-      paddingTop: theme.spacing(3),
+      paddingTop: 24,
     },
   },
   cardContentIconNoAppBar: {
-    paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(3),
+    paddingLeft: 16,
+    paddingTop: 24,
   },
   cardContentNoIconAppBar: {
-    paddingLeft: theme.spacing(3),
-    paddingTop: theme.spacing(1),
+    paddingLeft: 24,
+    paddingTop: 8,
   },
   cardContentNoIconNoAppBar: {
-    paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(1 + 2),
+    paddingLeft: 16,
+    paddingTop: 24,
   },
   avatar: {
     backgroundColor: theme.palette.primary.main,
-    height: theme.spacing(5),
-    width: theme.spacing(5),
+    height: 40,
+    width: 40,
   },
   flex: {
     flexGrow: 1,
