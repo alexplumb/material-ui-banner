@@ -8,11 +8,11 @@ export const useIsMobile = () => useMediaQuery((theme) => theme.breakpoints.down
 export const Hide = ({ mdUp = false, mdDown = false, children }) => {
   const isMobile = useIsMobile();
 
-  if (mdUp && isMobile) {
+  if (mdUp && !isMobile) {
     return null;
   }
 
-  if (mdDown && !isMobile) {
+  if (mdDown && isMobile) {
     return null;
   }
 
