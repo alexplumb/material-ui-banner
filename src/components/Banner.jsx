@@ -41,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 24,
   },
   avatar: {
-    backgroundColor: theme.palette.primary.main,
     height: 40,
     width: 40,
   },

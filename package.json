@@ -1,6 +1,6 @@
 {
   "name": "material-ui-banner",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "A material-ui component that allows you to add a banner underneath the app bar.",
   "main": "dist/index.js",
   "scripts": {
