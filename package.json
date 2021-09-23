@@ -1,6 +1,6 @@
 {
   "name": "material-ui-banner",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A material-ui component that allows you to add a banner underneath the app bar.",
   "main": "dist/index.js",
   "scripts": {
@@ -39,6 +39,8 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.0.1",
     "@mui/styles": "^5.0.1",
     "clsx": "^1.1.1",
