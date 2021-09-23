@@ -5,8 +5,8 @@ import {
   Paper, Card, Grid, Typography,
   Button, Divider, ButtonBase, CardActions,
   CardContent, Avatar, Collapse, Container,
-} from '@material-ui/core';
-import makeStyles from '@material-ui/styles/makeStyles';
+} from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { Hide, useIsMobile } from './Hide';
 
 const useStyles = makeStyles((theme) => ({

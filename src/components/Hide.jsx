@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@material-ui/core';
+import { useMediaQuery } from '@mui/material';
 
 /**
  * Checks whether or not the current device is a mobile device, based on device width

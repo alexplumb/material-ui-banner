@@ -2,8 +2,8 @@ import React, { useCallback } from 'react';
 import {
   AppBar, Toolbar, Typography, Button,
   Grid, Card,
-} from '@material-ui/core';
-import makeStyles from '@material-ui/styles/makeStyles';
+} from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 import { Banner, StaticBanner } from '../../index';
 
 const useStyles = makeStyles((theme) => ({

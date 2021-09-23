@@ -25,8 +25,8 @@ module.exports = merge(common, {
         amd: 'react-dom',
       },
     },
-    "@material-ui/core",
-    /@material-ui\/core\/*./,
+    "@mui/material",
+    /@mui\/material\/*./,
     'clsx',
   ],
   plugins: [

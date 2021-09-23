@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import createTheme from '@material-ui/core/styles/createTheme';
-import ThemeProvider from '@material-ui/core/styles/ThemeProvider';
+import createTheme from '@mui/material/styles/createTheme';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import App from './components/App';
 
 const theme = createTheme();
